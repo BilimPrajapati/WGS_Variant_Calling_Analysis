@@ -1,0 +1,193 @@
+================================================================================
+JobID = 10277760
+User = u12391, Account = mthesis_prajapati1
+Partition = medium, Nodelist = amp022
+================================================================================
+Using GATK jar /sw/rev/25.04/cascadelake_opx_rocky8/linux-rocky8-cascadelake/gcc-14.2.0/gatk-4.5.0.0-o7xhsatv44zgensoxdvqtpo7whks3cgs/bin/gatk-package-4.5.0.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -Xmx16g -XX:+UseParallelGC -XX:ParallelGCThreads=4 -Djava.io.tmpdir=/local/jobs/u12391_10277760 -jar /sw/rev/25.04/cascadelake_opx_rocky8/linux-rocky8-cascadelake/gcc-14.2.0/gatk-4.5.0.0-o7xhsatv44zgensoxdvqtpo7whks3cgs/bin/gatk-package-4.5.0.0-local.jar VariantRecalibrator --tmp-dir /local/jobs/u12391_10277760 -R /scratch/users/u12391/CompBiol/genomes/Gallus_gallus.GRCg6a/Gallus_gallus.GRCg6a.dna.toplevel.fa --variant /scratch/users/u12391/CompBiol/CompBiol/GenotypeGVCFs/WL_BL_raw_variants.vcf.gz --sequence-dictionary /scratch/users/u12391/CompBiol/genomes/Gallus_gallus.GRCg6a/Gallus_gallus.GRCg6a.dna.toplevel.dict --output /scratch/users/u12391/CompBiol/CompBiol/WL_BL_SNPs.recal --tranches-file /scratch/users/u12391/CompBiol/CompBiol/WL_BL_SNPs.tranches --rscript-file /scratch/users/u12391/CompBiol/CompBiol/WL_BL_SNPs.R --resource:Affy_chip,known=false,training=true,truth=true,prior=15.0 /scratch/users/u12391/CompBiol/genomes/Gallus_gallus.GRCg6a/Galgal6_Affymetrix_600k.vcf.gz --resource:Ensemble,known=true,training=false,truth=false,prior=2.0 /scratch/users/u12391/CompBiol/genomes/Gallus_gallus.GRCg6a/gallus_gallus.vcf.gz -an QD -an MQ -an MQRankSum -an ReadPosRankSum -an FS -an SOR -mode SNP
+10:28:33.015 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/sw/rev/25.04/cascadelake_opx_rocky8/linux-rocky8-cascadelake/gcc-14.2.0/gatk-4.5.0.0-o7xhsatv44zgensoxdvqtpo7whks3cgs/bin/gatk-package-4.5.0.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+10:28:33.161 INFO  VariantRecalibrator - ------------------------------------------------------------
+10:28:33.163 INFO  VariantRecalibrator - The Genome Analysis Toolkit (GATK) v4.5.0.0
+10:28:33.163 INFO  VariantRecalibrator - For support and documentation go to https://software.broadinstitute.org/gatk/
+10:28:33.163 INFO  VariantRecalibrator - Executing as u12391@amp022 on Linux v4.18.0-553.54.1.el8_10.x86_64 amd64
+10:28:33.163 INFO  VariantRecalibrator - Java runtime: OpenJDK 64-Bit Server VM v17.0.11+9
+10:28:33.164 INFO  VariantRecalibrator - Start Date/Time: August 9, 2025 at 10:28:32 AM CEST
+10:28:33.164 INFO  VariantRecalibrator - ------------------------------------------------------------
+10:28:33.164 INFO  VariantRecalibrator - ------------------------------------------------------------
+10:28:33.164 INFO  VariantRecalibrator - HTSJDK Version: 4.1.0
+10:28:33.164 INFO  VariantRecalibrator - Picard Version: 3.1.1
+10:28:33.164 INFO  VariantRecalibrator - Built for Spark Version: 3.5.0
+10:28:33.165 INFO  VariantRecalibrator - HTSJDK Defaults.COMPRESSION_LEVEL : 2
+10:28:33.165 INFO  VariantRecalibrator - HTSJDK Defaults.USE_ASYNC_IO_READ_FOR_SAMTOOLS : false
+10:28:33.165 INFO  VariantRecalibrator - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS : true
+10:28:33.165 INFO  VariantRecalibrator - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_TRIBBLE : false
+10:28:33.165 INFO  VariantRecalibrator - Deflater: IntelDeflater
+10:28:33.165 INFO  VariantRecalibrator - Inflater: IntelInflater
+10:28:33.165 INFO  VariantRecalibrator - GCS max retries/reopens: 20
+10:28:33.165 INFO  VariantRecalibrator - Requester pays: disabled
+10:28:33.166 INFO  VariantRecalibrator - Initializing engine
+10:28:33.502 INFO  FeatureManager - Using codec VCFCodec to read file file:///scratch/users/u12391/CompBiol/genomes/Gallus_gallus.GRCg6a/Galgal6_Affymetrix_600k.vcf.gz
+10:28:33.770 INFO  FeatureManager - Using codec VCFCodec to read file file:///scratch/users/u12391/CompBiol/genomes/Gallus_gallus.GRCg6a/gallus_gallus.vcf.gz
+10:28:34.121 INFO  FeatureManager - Using codec VCFCodec to read file file:///scratch/users/u12391/CompBiol/CompBiol/GenotypeGVCFs/WL_BL_raw_variants.vcf.gz
+10:28:34.268 WARN  IndexUtils - Feature file "file:///scratch/users/u12391/CompBiol/genomes/Gallus_gallus.GRCg6a/Galgal6_Affymetrix_600k.vcf.gz" appears to contain no sequence dictionary. Attempting to retrieve a sequence dictionary from the associated index file
+10:28:34.333 WARN  IndexUtils - Feature file "file:///scratch/users/u12391/CompBiol/genomes/Gallus_gallus.GRCg6a/gallus_gallus.vcf.gz" appears to contain no sequence dictionary. Attempting to retrieve a sequence dictionary from the associated index file
+10:28:34.366 INFO  VariantRecalibrator - Done initializing engine
+10:28:34.372 INFO  TrainingSet - Found Affy_chip track: 	Known = false 	Training = true 	Truth = true 	Prior = Q15.0
+10:28:34.372 INFO  TrainingSet - Found Ensemble track: 	Known = true 	Training = false 	Truth = false 	Prior = Q2.0
+10:28:34.384 WARN  GATKVariantContextUtils - Can't determine output variant file format from output file extension "recal". Defaulting to VCF.
+10:28:34.418 INFO  ProgressMeter - Starting traversal
+10:28:34.418 INFO  ProgressMeter -        Current Locus  Elapsed Minutes    Variants Processed  Variants/Minute
+10:28:44.426 INFO  ProgressMeter -           1:31989527              0.2                981000        5882470.5
+10:28:54.430 INFO  ProgressMeter -          1:155068548              0.3               2382000        7141715.0
+10:29:04.441 INFO  ProgressMeter -           2:44626697              0.5               3432000        6858970.1
+10:29:14.444 INFO  ProgressMeter -          2:122890146              0.7               4319000        6474291.7
+10:29:24.448 INFO  ProgressMeter -           3:84314456              0.8               5574000        6684789.1
+10:29:34.448 INFO  ProgressMeter -           4:53916244              1.0               6515000        6511744.1
+10:29:44.454 INFO  ProgressMeter -           5:34354181              1.2               7395000        6335313.3
+10:29:54.457 INFO  ProgressMeter -           6:30005956              1.3               8106000        6076537.7
+10:30:04.469 INFO  ProgressMeter -           9:12686561              1.5               9134000        6085884.7
+10:30:14.481 INFO  ProgressMeter -          13:12575171              1.7              10108000        6060981.6
+10:30:24.486 INFO  ProgressMeter -           20:9456177              1.8              11020000        6007195.6
+10:30:32.639 INFO  ProgressMeter -  AADN05001514.1:1624              2.0              11856592        6017505.5
+10:30:32.640 INFO  ProgressMeter - Traversal complete. Processed 11856592 total variants in 2.0 minutes.
+10:30:32.948 INFO  VariantDataManager - QD: 	 mean = 21.65	 standard deviation = 7.21
+10:30:33.462 INFO  VariantDataManager - MQ: 	 mean = 59.98	 standard deviation = 0.57
+10:30:34.031 INFO  VariantDataManager - MQRankSum: 	 mean = -0.00	 standard deviation = 0.04
+10:30:34.733 INFO  VariantDataManager - ReadPosRankSum: 	 mean = 0.20	 standard deviation = 0.89
+10:30:35.437 INFO  VariantDataManager - FS: 	 mean = 1.82	 standard deviation = 3.18
+10:30:35.893 INFO  VariantDataManager - SOR: 	 mean = 0.93	 standard deviation = 0.57
+10:30:41.717 INFO  VariantDataManager - Annotation order is: [MQ, QD, FS, SOR, MQRankSum, ReadPosRankSum]
+10:30:41.887 INFO  VariantDataManager - Training with 428917 variants after standard deviation thresholding.
+10:30:41.895 INFO  GaussianMixtureModel - Initializing model with 100 k-means iterations...
+10:31:04.780 INFO  VariantRecalibratorEngine - Finished iteration 0.
+10:31:13.459 INFO  VariantRecalibratorEngine - Finished iteration 5. 	Current change in mixture coefficients = 1.74187
+10:31:21.802 INFO  VariantRecalibratorEngine - Finished iteration 10. 	Current change in mixture coefficients = 0.28521
+10:31:30.099 INFO  VariantRecalibratorEngine - Finished iteration 15. 	Current change in mixture coefficients = 0.18200
+10:31:38.368 INFO  VariantRecalibratorEngine - Finished iteration 20. 	Current change in mixture coefficients = 0.10520
+10:31:46.718 INFO  VariantRecalibratorEngine - Finished iteration 25. 	Current change in mixture coefficients = 0.11495
+10:31:55.013 INFO  VariantRecalibratorEngine - Finished iteration 30. 	Current change in mixture coefficients = 0.17201
+10:32:03.246 INFO  VariantRecalibratorEngine - Finished iteration 35. 	Current change in mixture coefficients = 0.15225
+10:32:11.493 INFO  VariantRecalibratorEngine - Finished iteration 40. 	Current change in mixture coefficients = 0.14166
+10:32:19.693 INFO  VariantRecalibratorEngine - Finished iteration 45. 	Current change in mixture coefficients = 0.01335
+10:32:27.894 INFO  VariantRecalibratorEngine - Finished iteration 50. 	Current change in mixture coefficients = 0.00378
+10:32:32.824 INFO  VariantRecalibratorEngine - Convergence after 53 iterations!
+10:32:34.074 INFO  VariantRecalibratorEngine - Evaluating full set of 10286351 variants...
+10:35:13.773 INFO  VariantDataManager - Selected worst 169461 scoring variants --> variants with LOD <= -5.0000.
+10:35:13.774 INFO  GaussianMixtureModel - Initializing model with 100 k-means iterations...
+10:35:16.433 INFO  VariantRecalibratorEngine - Finished iteration 0.
+10:35:17.130 INFO  VariantRecalibratorEngine - Finished iteration 5. 	Current change in mixture coefficients = 0.08156
+10:35:17.834 INFO  VariantRecalibratorEngine - Finished iteration 10. 	Current change in mixture coefficients = 0.03205
+10:35:18.542 INFO  VariantRecalibratorEngine - Finished iteration 15. 	Current change in mixture coefficients = 0.01035
+10:35:19.107 INFO  VariantRecalibratorEngine - Convergence after 19 iterations!
+10:35:19.276 INFO  VariantRecalibratorEngine - Evaluating full set of 10286351 variants...
+10:36:37.364 INFO  TrancheManager - Finding 4 tranches for 10286351 variants
+10:36:42.929 INFO  TrancheManager -   TruthSensitivityTranche threshold 100.00 => selection metric threshold 0.000
+10:36:43.843 INFO  TrancheManager -   Found tranche for 100.000: 0.000 threshold starting with variant 0; running score is 0.000 
+10:36:43.843 INFO  TrancheManager -   TruthSensitivityTranche is TruthSensitivityTranche targetTruthSensitivity=100.00 minVQSLod=-1076.2379 known=(5457368 @ 2.4192) novel=(4828983 @ 2.2142) truthSites(429571 accessible, 429571 called), name=anonymous]
+10:36:43.844 INFO  TrancheManager -   TruthSensitivityTranche threshold 99.90 => selection metric threshold 0.001
+10:36:44.707 INFO  TrancheManager -   Found tranche for 99.900: 0.001 threshold starting with variant 643407; running score is 0.001 
+10:36:44.707 INFO  TrancheManager -   TruthSensitivityTranche is TruthSensitivityTranche targetTruthSensitivity=99.90 minVQSLod=-4.3834 known=(5313025 @ 2.4364) novel=(4329919 @ 2.3176) truthSites(429571 accessible, 429141 called), name=anonymous]
+10:36:44.707 INFO  TrancheManager -   TruthSensitivityTranche threshold 99.00 => selection metric threshold 0.010
+10:36:45.481 INFO  TrancheManager -   Found tranche for 99.000: 0.010 threshold starting with variant 2165740; running score is 0.010 
+10:36:45.481 INFO  TrancheManager -   TruthSensitivityTranche is TruthSensitivityTranche targetTruthSensitivity=99.00 minVQSLod=3.6769 known=(4514995 @ 2.4460) novel=(3605616 @ 2.3545) truthSites(429571 accessible, 425275 called), name=anonymous]
+10:36:45.481 INFO  TrancheManager -   TruthSensitivityTranche threshold 90.00 => selection metric threshold 0.100
+10:36:46.197 INFO  TrancheManager -   Found tranche for 90.000: 0.100 threshold starting with variant 6224205; running score is 0.100 
+10:36:46.197 INFO  TrancheManager -   TruthSensitivityTranche is TruthSensitivityTranche targetTruthSensitivity=90.00 minVQSLod=5.3606 known=(2216251 @ 2.5083) novel=(1845895 @ 2.4083) truthSites(429571 accessible, 386613 called), name=anonymous]
+10:36:46.199 INFO  VariantRecalibrator - Writing out recalibration table...
+10:37:26.712 INFO  VariantRecalibrator - Writing out visualization Rscript file...
+10:37:27.156 INFO  VariantRecalibrator - Building MQ x QD plot...
+10:37:27.160 INFO  VariantRecalibratorEngine - Evaluating full set of 3721 variants...
+10:37:27.468 INFO  VariantRecalibratorEngine - Evaluating full set of 3721 variants...
+10:37:27.615 INFO  VariantRecalibrator - Building MQ x FS plot...
+10:37:27.618 INFO  VariantRecalibratorEngine - Evaluating full set of 3721 variants...
+10:37:27.924 INFO  VariantRecalibratorEngine - Evaluating full set of 3721 variants...
+10:37:28.563 INFO  VariantRecalibrator - Building MQ x SOR plot...
+10:37:28.566 INFO  VariantRecalibratorEngine - Evaluating full set of 3721 variants...
+10:37:28.873 INFO  VariantRecalibratorEngine - Evaluating full set of 3721 variants...
+10:37:29.001 INFO  VariantRecalibrator - Building MQ x MQRankSum plot...
+10:37:29.002 INFO  VariantRecalibratorEngine - Evaluating full set of 3660 variants...
+10:37:29.302 INFO  VariantRecalibratorEngine - Evaluating full set of 3660 variants...
+10:37:29.424 INFO  VariantRecalibrator - Building MQ x ReadPosRankSum plot...
+10:37:29.425 INFO  VariantRecalibratorEngine - Evaluating full set of 3721 variants...
+10:37:29.730 INFO  VariantRecalibratorEngine - Evaluating full set of 3721 variants...
+10:37:29.849 INFO  VariantRecalibrator - Building QD x FS plot...
+10:37:29.850 INFO  VariantRecalibratorEngine - Evaluating full set of 3721 variants...
+10:37:30.157 INFO  VariantRecalibratorEngine - Evaluating full set of 3721 variants...
+10:37:30.274 INFO  VariantRecalibrator - Building QD x SOR plot...
+10:37:30.275 INFO  VariantRecalibratorEngine - Evaluating full set of 3721 variants...
+10:37:30.584 INFO  VariantRecalibratorEngine - Evaluating full set of 3721 variants...
+10:37:30.704 INFO  VariantRecalibrator - Building QD x MQRankSum plot...
+10:37:30.704 INFO  VariantRecalibratorEngine - Evaluating full set of 3660 variants...
+10:37:31.007 INFO  VariantRecalibratorEngine - Evaluating full set of 3660 variants...
+10:37:31.124 INFO  VariantRecalibrator - Building QD x ReadPosRankSum plot...
+10:37:31.124 INFO  VariantRecalibratorEngine - Evaluating full set of 3721 variants...
+10:37:31.433 INFO  VariantRecalibratorEngine - Evaluating full set of 3721 variants...
+10:37:31.552 INFO  VariantRecalibrator - Building FS x SOR plot...
+10:37:31.552 INFO  VariantRecalibratorEngine - Evaluating full set of 3721 variants...
+10:37:31.860 INFO  VariantRecalibratorEngine - Evaluating full set of 3721 variants...
+10:37:31.977 INFO  VariantRecalibrator - Building FS x MQRankSum plot...
+10:37:31.977 INFO  VariantRecalibratorEngine - Evaluating full set of 3660 variants...
+10:37:32.278 INFO  VariantRecalibratorEngine - Evaluating full set of 3660 variants...
+10:37:32.395 INFO  VariantRecalibrator - Building FS x ReadPosRankSum plot...
+10:37:32.395 INFO  VariantRecalibratorEngine - Evaluating full set of 3721 variants...
+10:37:32.703 INFO  VariantRecalibratorEngine - Evaluating full set of 3721 variants...
+10:37:32.819 INFO  VariantRecalibrator - Building SOR x MQRankSum plot...
+10:37:32.819 INFO  VariantRecalibratorEngine - Evaluating full set of 3660 variants...
+10:37:33.123 INFO  VariantRecalibratorEngine - Evaluating full set of 3660 variants...
+10:37:33.241 INFO  VariantRecalibrator - Building SOR x ReadPosRankSum plot...
+10:37:33.241 INFO  VariantRecalibratorEngine - Evaluating full set of 3721 variants...
+10:37:33.551 INFO  VariantRecalibratorEngine - Evaluating full set of 3721 variants...
+10:37:33.670 INFO  VariantRecalibrator - Building MQRankSum x ReadPosRankSum plot...
+10:37:33.671 INFO  VariantRecalibratorEngine - Evaluating full set of 3660 variants...
+10:37:33.973 INFO  VariantRecalibratorEngine - Evaluating full set of 3660 variants...
+10:37:34.096 INFO  VariantRecalibrator - Executing: Rscript /scratch/users/u12391/CompBiol/CompBiol/WL_BL_SNPs.R
+10:37:37.735 INFO  VariantRecalibrator - Shutting down engine
+[August 9, 2025 at 10:37:37 AM CEST] org.broadinstitute.hellbender.tools.walkers.vqsr.VariantRecalibrator done. Elapsed time: 9.08 minutes.
+Runtime.totalMemory()=9158262784
+org.broadinstitute.hellbender.utils.R.RScriptExecutorException: 
+Rscript exited with 1
+Command Line: Rscript -e tempLibDir = '/local/jobs/u12391_10277760/Rlib.8216275794785903212';source('/scratch/users/u12391/CompBiol/CompBiol/WL_BL_SNPs.R');
+Stdout: 
+Stderr: Error:
+! The `space` argument of `pal_gradient_n()` only supports be "Lab" as
+  of scales 0.3.0.
+Backtrace:
+     ▆
+  1. ├─base::source("/scratch/users/u12391/CompBiol/CompBiol/WL_BL_SNPs.R")
+  2. │ ├─base::withVisible(eval(ei, envir))
+  3. │ └─base::eval(ei, envir)
+  4. │   └─base::eval(ei, envir)
+  5. └─ggplot2::scale_fill_gradient(high = "green", low = "red", space = "rgb")
+  6.   ├─ggplot2::continuous_scale(...)
+  7.   │ └─ggplot2::ggproto(...)
+  8.   │   └─rlang::list2(...)
+  9.   └─scales::pal_seq_gradient(low, high, space)
+ 10.     └─scales::pal_gradient_n(c(low, high), space = space)
+ 11.       └─lifecycle::deprecate_stop("0.3.0", "pal_gradient_n(space = 'only supports be \"Lab\"')")
+ 12.         └─lifecycle:::deprecate_stop0(msg)
+ 13.           └─rlang::cnd_signal(...)
+Execution halted
+
+	at org.broadinstitute.hellbender.utils.R.RScriptExecutor.getScriptException(RScriptExecutor.java:79)
+	at org.broadinstitute.hellbender.utils.R.RScriptExecutor.getScriptException(RScriptExecutor.java:18)
+	at org.broadinstitute.hellbender.utils.runtime.ScriptExecutor.executeCuratedArgs(ScriptExecutor.java:112)
+	at org.broadinstitute.hellbender.utils.R.RScriptExecutor.exec(RScriptExecutor.java:125)
+	at org.broadinstitute.hellbender.tools.walkers.vqsr.VariantRecalibrator.createVisualizationScript(VariantRecalibrator.java:1146)
+	at org.broadinstitute.hellbender.tools.walkers.vqsr.VariantRecalibrator.onTraversalSuccess(VariantRecalibrator.java:706)
+	at org.broadinstitute.hellbender.engine.GATKTool.doWork(GATKTool.java:1102)
+	at org.broadinstitute.hellbender.cmdline.CommandLineProgram.runTool(CommandLineProgram.java:149)
+	at org.broadinstitute.hellbender.cmdline.CommandLineProgram.instanceMainPostParseArgs(CommandLineProgram.java:198)
+	at org.broadinstitute.hellbender.cmdline.CommandLineProgram.instanceMain(CommandLineProgram.java:217)
+	at org.broadinstitute.hellbender.Main.runCommandLineProgram(Main.java:166)
+	at org.broadinstitute.hellbender.Main.mainEntry(Main.java:209)
+	at org.broadinstitute.hellbender.Main.main(Main.java:306)
+gatk --java-options "-Xmx16g -XX:+UseParallelGC -XX:ParallelGCThreads=4 -Djava.io.tmpdir=$TMP_LOCAL" VariantRecalibrator --tmp-dir $TMP_LOCAL -R /scratch/users/u12391/CompBiol/genomes/Gallus_gallus.GRCg6a/Gallus_gallus.GRCg6a.dna.toplevel.fa --variant /scratch/users/u12391/CompBiol/CompBiol/GenotypeGVCFs/WL_BL_raw_variants.vcf.gz --sequence-dictionary /scratch/users/u12391/CompBiol/genomes/Gallus_gallus.GRCg6a/Gallus_gallus.GRCg6a.dna.toplevel.dict --output /scratch/users/u12391/CompBiol/CompBiol/WL_BL_SNPs.recal --tranches-file /scratch/users/u12391/CompBiol/CompBiol/WL_BL_SNPs.tranches --rscript-file /scratch/users/u12391/CompBiol/CompBiol/WL_BL_SNPs.R --resource:Affy_chip,known=false,training=true,truth=true,prior=15.0 /scratch/users/u12391/CompBiol/genomes/Gallus_gallus.GRCg6a/Galgal6_Affymetrix_600k.vcf.gz --resource:Ensemble,known=true,training=false,truth=false,prior=2.0 /scratch/users/u12391/CompBiol/genomes/Gallus_gallus.GRCg6a/gallus_gallus.vcf.gz -an QD -an MQ -an MQRankSum -an ReadPosRankSum -an FS -an SOR -mode SNP
+============ Job Information ===================================================
+Submitted: 2025-08-09T10:27:10
+Started: 2025-08-09T10:28:16
+Ended: 2025-08-09T10:37:38
+Elapsed: 10 min, Limit: 60 min, Difference: 50 min
+CPUs: 8, Nodes: 1
+Estimated Consumption: 1.33 core-hours
+================================================================================
